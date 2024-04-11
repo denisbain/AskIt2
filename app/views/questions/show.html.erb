@@ -13,6 +13,7 @@
 <%= link_to "Destroy", question_path(@question), data: {method: :delete, confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
 <hr class="my-3">
 
+<%= render 'shared/errors', object: @answer %>
 <h2>Write your answer</h2>
 <%= form_with model: [@question, @answer] do |f| %>
   <div>
