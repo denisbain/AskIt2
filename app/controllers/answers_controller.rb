@@ -1,5 +1,11 @@
 class AnswersController < ApplicationController
   before_action :set_question!
+  def destroy
+    answer = @question.answers.find params[:id]
+    answer.destroy
+    flash[:success] = 'Answer deleted!'
+    redirect_to question_path(@question)
+  end
   def create
     @answer = @question.answers.build answer_params
     if @answer.save
