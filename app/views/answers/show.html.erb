@@ -1,4 +1,5 @@
 <article class="mb-3">
+
 <time datetime="<%= @answer.formatted_created_at%>">
   <small><%= @answer.formatted_created_at %></small>
 </time>
@@ -7,3 +8,6 @@
   <%= @answer.body %>
 </p>
 
+<%= link_to "Back", question_path(@question), class: 'btn btn-primary' %>
+
+</article>
