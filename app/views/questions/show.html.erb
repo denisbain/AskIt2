@@ -28,3 +28,14 @@
     </div>
     <%= f.submit "Submit question", class: 'btn btn-primary' %>
 <% end %>
+
+<h2 class="mt-5">Answers</h2>
+<% @answers.each do |answer| %>
+  <time datetime="<%= answer.formatted_created_at%>">
+    <small><%= answer.formatted_created_at %></small>
+  </time>
+
+  <p>
+    <%= answer.body %>
+  </p>
+<% end %>

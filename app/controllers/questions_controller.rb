@@ -2,6 +2,7 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: %i[show destroy edit update]
   def show
     @answer = @question.answers.build
+    @answers = Answer.order created_at: :desc
   end
   def destroy
     @question.destroy
