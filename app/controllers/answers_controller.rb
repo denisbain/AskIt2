@@ -1,5 +1,22 @@
 class AnswersController < ApplicationController
   before_action :set_question!
+
+  def update
+    @answer = @question.answers.find params[:id]
+    if @answer.update answer_params
+      flash[:success] = 'Answer updated!'
+      redirect_to question_path(@question)
+    else
+      render 'answers/edit'
+    end
+  end
+  def show
+    @answer = @question.answers.find params[:id]
+  end
+  def edit
+    @answer = @question.answers.find params[:id]
+  end
+
   def destroy
     answer = @question.answers.find params[:id]
     answer.destroy
