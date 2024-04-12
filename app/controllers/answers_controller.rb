@@ -7,7 +7,7 @@ class AnswersController < ApplicationController
       flash[:success] = 'Answer updated!'
       redirect_to question_path(@question)
     else
-      render 'answers/edit'
+      render :edit
     end
   end
   def edit
