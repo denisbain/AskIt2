@@ -1,8 +1,8 @@
 <h1 class="mb-4"><%= @question.title %></h1>
 
-<p class="lead my-3">
-  <%= @question.body %>
-</p>
+<div class="lead my-3">
+  <%= sanitize @question.body %>
+</div>
 
 <time datetime="<%= @question.formatted_created_at%>">
   <small><%= @question.formatted_created_at %></small>
