@@ -11,7 +11,9 @@
       <h3 class="card-title"><%= question.title%></h3>
 
       <section class="card-text">
-        <p class="my-2"><i><%= question.body %></i></p>
+        <p class="my-2"><i>
+          <%= strip_tags question.body %>
+        </i></p>
 
         <time datetime="<%= question.formatted_created_at%>">
           <small><%= question.formatted_created_at %></small>
