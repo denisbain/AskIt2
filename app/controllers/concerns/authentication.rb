@@ -11,6 +11,9 @@ module Authentication
       current_user.present?
     end
 
+    def sign_out
+      session.delete :user_id
+    end
     def sign_in(user)
       session[:user_id] = user.id
     end
