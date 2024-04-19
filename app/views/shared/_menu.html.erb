@@ -14,6 +14,8 @@
                           class: "nav-link px-2 dropdown-toggle",
                           data: {"bs-toggle": 'dropdown'}, current_page: current_page %>
               <ul class="dropdown-menu">
+                <li><%= link_to 'Edit profile', edit_user_path(current_user), class: 'dropdown-item' %></li>
+                <li><hr class="dropdown-divider"></li>
                 <li><%= link_to 'Log Out', session_path , class: 'dropdown-item', data: {method: :delete} %></li>
               </ul>
           </li>
