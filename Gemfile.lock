@@ -215,6 +215,9 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    valid_email2 (5.2.3)
+      activemodel (>= 3.2)
+      mail (~> 2.5)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -259,6 +262,7 @@ DEPENDENCIES
   sqlite3 (= 1.4.2)
   turbolinks (= 5.2.1)
   tzinfo-data
+  valid_email2
   web-console (= 4.1.0)
   webdrivers
   webpacker (= 5.4.0)
