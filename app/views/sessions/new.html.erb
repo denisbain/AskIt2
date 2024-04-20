@@ -22,5 +22,14 @@
     </div>
   </div>
 
+  <div class="row mb-3">
+    <div class="offset-sm-2 col-sm-2">
+      <div class="form-check"
+      <%= f.check_box :remember_me, class: "dorm-check-input", value: '1' %>
+      <%= f.label :remember_me, class: 'for-check-label' %>
+      </div>
+    </div>
+  </div>
+
   <%= f.submit "Sign In", class: 'btn btn-primary btn-lg' %>
 <% end %>

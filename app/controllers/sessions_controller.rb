@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   def new
   end
   def create
+    render plain: params.to_yaml and return
     user = User.find_by email: params[:email]
     if user&.authenticate(params[:password])
       sign_in user
