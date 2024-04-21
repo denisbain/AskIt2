@@ -25,6 +25,7 @@ gem 'jbuilder', '2.7'
 gem 'bcrypt', '~> 3.1.7'
 gem 'draper', '~> 4.0'
 gem 'valid_email2'
+gem 'rubyzip', '~> 2'
 
 gem 'pagy', '~> 5'
 # Use Active Storage variant
