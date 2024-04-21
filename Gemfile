@@ -26,6 +26,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'draper', '~> 4.0'
 gem 'valid_email2'
 gem 'rubyzip', '~> 2'
+gem 'caxlsx'
+gem 'caxlsx_rails'
 
 gem 'pagy', '~> 5'
 # Use Active Storage variant
