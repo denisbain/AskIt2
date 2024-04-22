@@ -29,6 +29,7 @@ gem 'rubyzip', '~> 2'
 gem 'caxlsx'
 gem 'caxlsx_rails'
 gem 'rubyXL'
+gem 'activerecord-import'
 
 gem 'pagy', '~> 5'
 # Use Active Storage variant
