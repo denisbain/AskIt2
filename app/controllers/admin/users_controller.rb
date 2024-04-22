@@ -11,6 +11,10 @@ class Admin::UsersController < ApplicationController
       end
   end
 
+  def create
+
+  end
+
   private
   def respond_with_zipped_users
     compressed_filestream = Zip::OutputStream.write_buffer do |zos|
