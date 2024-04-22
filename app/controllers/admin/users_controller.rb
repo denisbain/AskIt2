@@ -12,7 +12,12 @@ class Admin::UsersController < ApplicationController
   end
 
   def create
+    if params[:archive].present?
+      UserBulkServive.call params[:archive]
+      flash[:success] = "User imported!"
+    end
 
+    redirect_to admin_users_path
   end
 
   private
