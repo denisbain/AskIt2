@@ -13,7 +13,7 @@ class Admin::UsersController < ApplicationController
 
   def create
     if params[:archive].present?
-      UserBulkServive.call params[:archive]
+      UserBulkService.call params[:archive]
       flash[:success] = "User imported!"
     end
 

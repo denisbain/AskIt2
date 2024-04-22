@@ -28,6 +28,7 @@ gem 'valid_email2'
 gem 'rubyzip', '~> 2'
 gem 'caxlsx'
 gem 'caxlsx_rails'
+gem 'rubyXL'
 
 gem 'pagy', '~> 5'
 # Use Active Storage variant
@@ -39,6 +40,7 @@ gem 'bootsnap', '1.7.5', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry-rails'
 end
 
 group :development do
