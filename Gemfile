@@ -30,6 +30,7 @@ gem 'caxlsx'
 gem 'caxlsx_rails'
 gem 'rubyXL'
 gem 'activerecord-import'
+gem 'rails-i18n', '~> 7.0.0'
 
 gem 'pagy', '~> 5'
 # Use Active Storage variant
