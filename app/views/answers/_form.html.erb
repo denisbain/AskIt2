@@ -10,5 +10,5 @@
         <%= f.text_area :body, class: 'form-control' %>
       </div>
     </div>
-    <%= f.submit "Submit question", class: 'btn btn-primary' %>
+    <%= f.submit t('helpers.submit.create', model: t('activerecord.models.answer')), class: 'btn btn-primary' %>
 <% end %>

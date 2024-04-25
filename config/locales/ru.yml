@@ -1,6 +1,42 @@
-en:
+ru:
+  activerecord:
+    models:
+        question: "вопрос"
+        answer: "ответ"
+    attributes:
+        question:
+          title: "Заголовок"
+          body: "Текст"
   pages:
     index:
       title: "Добро пожаловать в AskIt!"
   menu:
     home: "Главная"
+    questions: "Вопросы"
+    sign_up: "Регистрация"
+    sign_in: "Войти"
+    sign_out: "Выйти"
+    edit: "Редактировать профиль"
+  questions:
+      destroy:
+        success: 'Вопрос удален!'
+      create:
+          success: 'Вопрос создан!'
+      update:
+        success: 'Вопрос обновлен!'
+      new:
+        title: "Новый вопрос"
+      index:
+        title: "Вопросы"
+        new_question: 'Новый вопрос'
+      show:
+        answer: 'Напишите ваш ответ'
+        answers: 'Ответы'
+
+  helpers:
+    submit:
+      create: 'Создать %{model}'
+    button:
+      show: 'Показать'
+      edit: 'Редактировать'
+      destroy: 'Удалить'
