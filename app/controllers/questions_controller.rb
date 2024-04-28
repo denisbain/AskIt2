@@ -33,7 +33,7 @@ class QuestionsController < ApplicationController
   def update
     if @question.update question_params
       flash[:success] = t('.success')
-      redirect_to questions_path(@question)
+      redirect_to questions_path(@question, locale: I18n.locale)
     else
       render :edit
     end
