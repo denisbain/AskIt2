@@ -9,8 +9,11 @@
 
 <% @questions.each do |question| %>
   <article class="card mt-3">
+    <section class="card-header">
+      <%= question.user.name_or_email %>
+    </section>
     <div class="card-body">
-      <h3 class="card-title"><%= question.title%></h3>
+      <h3><%= link_to question.title, question_path(question)%></h3>
 
       <section class="card-text">
         <p class="my-2"><i>
