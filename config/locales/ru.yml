@@ -34,6 +34,7 @@ ru:
       show:
         answer: 'Напишите ваш ответ'
         answers: 'Ответы'
+        comments: 'Комментарии'
 
   helpers:
     submit:
