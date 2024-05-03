@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
   include QuestionsAnswers
   before_action :set_question, only: %i[show destroy edit update]
   def index
-    @pagy, @questions = pagy Question.order(created_at: :desc)
+    @pagy, @questions = pagy Question.includes([:user]).order(created_at: :desc)
     @questions = @questions.decorate
   end
 

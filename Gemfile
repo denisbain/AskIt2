@@ -60,6 +60,7 @@ group :development do
   gem 'rubocop-performance', '~> 1.21', require: false
   gem 'rubocop-rails', '~> 2.24', require: false
   gem 'spring'
+  gem 'bullet'
 end
 
 group :test do
