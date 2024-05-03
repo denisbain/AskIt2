@@ -35,6 +35,11 @@ en:
       answer: 'Write your answer'
       answers: 'Answers'
       comments: 'Comments'
+  comments:
+    create:
+      success: 'Comment created!'
+    destroy:
+      success: 'Comment deleted!'
 
 
 

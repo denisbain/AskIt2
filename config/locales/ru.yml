@@ -35,6 +35,11 @@ ru:
         answer: 'Напишите ваш ответ'
         answers: 'Ответы'
         comments: 'Комментарии'
+  comments:
+    create:
+      success: 'Комментарий создан!'
+    destroy:
+      success: 'Комментарий удален!'
 
   helpers:
     submit:
