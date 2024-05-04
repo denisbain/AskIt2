@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: %i[show destroy edit update]
   before_action :fetch_tags, only: %i[new edit]
   def index
-    @pagy, @questions = pagy Question.includes([:user]).order(created_at: :desc)
+    @pagy, @questions = pagy Question.includes([:user, :tags]).order(created_at: :desc)
     @questions = @questions.decorate
   end
 
