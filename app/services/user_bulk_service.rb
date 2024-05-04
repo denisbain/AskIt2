@@ -25,5 +25,4 @@ class UserBulkService < ApplicationService
                password_confirmation: cells[2].value
     end
   end
-
 end

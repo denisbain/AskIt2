@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'active_support/core_ext/integer/time'
-
+# rubocop:disable Metrics/BlockLength
 Rails.application.configure do
   config.after_initialize do
-    Bullet.enable        = true #false
+    Bullet.enable        = true # false
     Bullet.alert         = true
     Bullet.bullet_logger = true
     Bullet.console       = true
@@ -85,3 +85,4 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 end
+# rubocop:enable Metrics/BlockLength
