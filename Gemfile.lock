@@ -138,6 +138,7 @@ GEM
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
     ffi (1.16.3)
+    foreman (0.88.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
     htmlentities (4.3.4)
@@ -351,6 +352,7 @@ DEPENDENCIES
   dotenv-rails
   draper (~> 4.0)
   faker (= 2.18)
+  foreman
   jbuilder (= 2.7)
   listen (= 3.3)
   lokalise_rails (~> 2)
