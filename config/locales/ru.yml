@@ -31,6 +31,7 @@ ru:
       index:
         title: "Вопросы"
         new_question: 'Новый вопрос'
+        search_by_tags: "Поиск по тегам"
       show:
         answer: 'Напишите ваш ответ'
         answers: 'Ответы'
@@ -48,3 +49,4 @@ ru:
       show: 'Показать'
       edit: 'Редактировать'
       destroy: 'Удалить'
+      submit: 'Подтвердить'
