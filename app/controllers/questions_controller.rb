@@ -3,7 +3,6 @@
 class QuestionsController < ApplicationController
   include QuestionsAnswers
   before_action :set_question, only: %i[show destroy edit update]
-  before_action :fetch_tags, only: %i[new edit]
   def index
     @pagy, @questions = pagy Question.all_by_tags(params[:tag_ids])
     @questions = @questions.decorate
@@ -55,7 +54,4 @@ class QuestionsController < ApplicationController
     @question = Question.find params[:id]
   end
 
-  def fetch_tags
-    @tags = Tag.all
-  end
 end

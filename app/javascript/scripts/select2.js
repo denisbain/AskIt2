@@ -10,7 +10,7 @@ const select2_langs = {
 }
 $(document).on("turbolinks:load", function() {
     $('.js-multiple-select').each(function () {
-        const $this = $(this)
+        const $this = $(this);
 
         let opts = {
             theme: 'bootstrap-5',
@@ -18,38 +18,32 @@ $(document).on("turbolinks:load", function() {
             placeholder: $this.data("placeholder"),
             allowClear: Boolean($this.data("allow-clear")),
             language: select2_langs[$('body').data('lang')]
-        }
+        };
 
-        if($this.hasClass('js-ajax-select')) {
+        if ($this.hasClass('js-ajax-select')) {
             const ajax_opts = {
                 ajax: {
                     url: $this.data('ajax-url'),
                     data: function (params) {
                         return {
                             term: params.term
-                        }
+                        };
                     },
                     dataType: 'json',
-                    delay: 1000,
-                    processResults: function (data, params) {
-                        const arr = $.map(data, function(value, index){
-                            return {
-                                id: value.id,
-                                text: value.title
-                            }
-                        })
+                    delay: 250,
+                    processResults: function (data) {
                         return {
-                            results: arr
-                        }
+                            results: data
+                        };
                     },
                     cache: true
                 },
                 minimumInputLength: 2
-            }
+            };
 
-            opts = Object.assign(opts, ajax_opts)
+            opts = Object.assign(opts, ajax_opts);
         }
 
-        $this.select2(opts)
-    })
-})
+        $this.select2(opts);
+    });
+});
