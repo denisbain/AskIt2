@@ -1,4 +1,4 @@
-
+import TomSelect from 'tom-select/dist/js/tom-select.complete'
 document.addEventListener("turbolinks:load", function() {
     document.querySelectorAll('.js-multiple-select').forEach((element) => {
         let opts = {
