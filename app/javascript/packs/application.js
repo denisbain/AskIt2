@@ -10,7 +10,7 @@ import "channels"
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 import 'stylesheets/application'
-import '../scripts/select2'
+require("scripts/select")
 
 Rails.start()
 Turbolinks.start()

@@ -3,7 +3,11 @@ module Api
     def index
       tags = Tag.arel_table
       @tags = Tag.where(tags[:title].matches("%#{params[:term]}%"))
-      render json: @tags.map { |tag| { id: tag.id, text: tag.title } }
+
+      respond_to do |format|
+        format.json { render json: @tags }
+      end
     end
   end
 end
+
