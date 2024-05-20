@@ -16,8 +16,10 @@ en:
         created_at: 'Created At'
   admin:
     users:
+      destroy:
+        success: 'User deleted!'
       update:
-        success: 'User updated'
+        success: 'User updated!'
   pages:
     index:
       title: "Welcome to AskIt!"

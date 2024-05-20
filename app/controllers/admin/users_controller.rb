@@ -34,6 +34,12 @@ module Admin
         render :edit
       end
     end
+
+    def destroy
+      @user.destroy
+      flash[:success] = t '.success'
+      redirect_to admin_users_path
+    end
     private
 
     def respond_with_zipped_users

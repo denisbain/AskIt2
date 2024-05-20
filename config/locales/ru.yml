@@ -16,6 +16,8 @@ ru:
           created_at: 'Создан'
   admin:
     users:
+      destroy:
+        success: 'Пользователь удален!'
       update:
         success: 'Пользователь обновлен'
   pages:
