@@ -71,6 +71,7 @@ GEM
     ast (2.4.2)
     bcrypt (3.1.20)
     bindex (0.8.1)
+    blueprinter (1.0.2)
     bootsnap (1.7.5)
       msgpack (~> 1.0)
     builder (3.2.4)
@@ -144,9 +145,6 @@ GEM
     htmlentities (4.3.4)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.12.0)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
     json (2.7.2)
     language_server-protocol (3.17.0.3)
     listen (3.3.0)
@@ -344,6 +342,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-import
   bcrypt (~> 3.1.7)
+  blueprinter
   bootsnap (= 1.7.5)
   bullet
   byebug
@@ -354,7 +353,6 @@ DEPENDENCIES
   draper (~> 4.0)
   faker (= 2.18)
   foreman
-  jbuilder
   listen (= 3.3)
   lokalise_rails (~> 2)
   pagy (~> 5)
