@@ -1,10 +1,14 @@
-import TomSelect from 'tom-select/dist/js/tom-select.complete'
+import TomSelect from 'tom-select/dist/js/tom-select.popular'
+import Translations from '../i18n/select.json'
+
 document.addEventListener("turbolinks:load", function() {
+    const i18n = Translations[document.querySelector('body').dataset.lang]
+
     document.querySelectorAll('.js-multiple-select').forEach((element) => {
         let opts = {
             plugins: {
                 'remove_button': {
-                    title: 'Remove'
+                    title: i18n['remove_button']
                 },
                 'no_backspace_delete': {},
                 'restore_on_backspace': {}
@@ -26,7 +30,7 @@ document.addEventListener("turbolinks:load", function() {
             },
             render: {
                 no_results: function(_data, _escape){
-                    return '<div class="no-results">No results found</div>';
+                    return '<div class="no-results">' + i18n['no_results'] + '</div>';
                 }
             }
         }
