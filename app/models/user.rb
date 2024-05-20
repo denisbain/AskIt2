@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :answers, dependent: :destroy
 
   validate :password_presence
-  validate :correct_old_password, on: :update, if: -> { password.present?}
+  validate :correct_old_password, on: :update, if: -> { password.present? && !admin_edit}
   validates :password, confirmation: true, allow_blank: true, length: { minimum: 8, maximum: 70 }
 
   validates :email, presence: true, uniqueness: true, 'valid_email_2/email': true
