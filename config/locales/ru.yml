@@ -9,6 +9,15 @@ ru:
         question:
           title: "Заголовок"
           body: "Текст"
+        user:
+          name: 'имя'
+          role: 'Роль'
+          email: 'Email'
+          created_at: 'Создан'
+  admin:
+    users:
+      update:
+        success: 'Пользователь обновлен'
   pages:
     index:
       title: "Добро пожаловать в AskIt!"
@@ -50,3 +59,6 @@ ru:
       edit: 'Редактировать'
       destroy: 'Удалить'
       submit: 'Подтвердить'
+  global:
+    dialog:
+      you_sure: 'Вы уверены?'

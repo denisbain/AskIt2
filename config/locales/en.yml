@@ -9,6 +9,15 @@ en:
       question:
         title: "Title"
         body: "Body"
+      user:
+        name: 'Name'
+        role: 'Role'
+        email: 'Email'
+        created_at: 'Created At'
+  admin:
+    users:
+      update:
+        success: 'User updated'
   pages:
     index:
       title: "Welcome to AskIt!"
@@ -52,3 +61,6 @@ en:
       edit: 'Edit'
       destroy: 'Delete'
       submit: 'Submit'
+  global:
+    dialog:
+      you_sure: 'Are you sure?'
