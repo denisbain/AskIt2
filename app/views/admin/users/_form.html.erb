@@ -62,5 +62,6 @@
     </div>
   <% end %>
 
-  <%= f.submit (user.new_record? ? "Register" : "Save"), class: 'btn btn-primary btn-lg' %>
+  <% t_key = (@user.new_record? ? "register" : "save") %>
+  <%= f.submit t(t_key, scope: 'global.users.forms'), class: 'btn btn-primary btn-lg' %>
 <% end %>

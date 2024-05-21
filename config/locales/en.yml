@@ -10,19 +10,34 @@ en:
         title: "Title"
         body: "Body"
       user:
-        name: 'Name'
-        role: 'Role'
+        created_at: 'Created at'
         email: 'Email'
-        created_at: 'Created At'
+        name: 'Name'
+        old_password: 'Old password'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        updated_at: 'Updated at'
+        role: 'Role'
+  pages:
+    index:
+      title: "Welcome to AskIt!"
   admin:
     users:
+      edit:
+        title: 'Edit user'
       destroy:
         success: 'User deleted!'
       update:
         success: 'User updated!'
-  pages:
-    index:
-      title: "Welcome to AskIt!"
+      index:
+        download_zipped: 'Download zipped XLSX'
+        title: 'Admin Users'
+        upload_form:
+          archive: 'Select archive'
+          submit: 'Upload'
+          upload_zipped: 'Upload users from XLSX'
+
+
   menu:
     home: "Home"
     questions: "Questions"
@@ -66,3 +81,12 @@ en:
   global:
     dialog:
       you_sure: 'Are you sure?'
+    user:
+      roles:
+        basic: 'Basic'
+        moderator: 'Moderator'
+        admin: 'Admin'
+    users:
+      forms:
+        save: 'Save'
+        register: 'Register'
