@@ -90,3 +90,5 @@ en:
       forms:
         save: 'Save'
         register: 'Register'
+    flash:
+      not_authorized: 'You are not authorized to perform this action!'

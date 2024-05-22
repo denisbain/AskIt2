@@ -33,6 +33,7 @@ gem 'rails-i18n', '~> 7.0.0'
 gem 'rubyXL'
 gem 'rubyzip', '~> 2'
 gem 'valid_email2'
+gem 'pundit', '~> 2.3'
 
 
 gem 'pagy', '~> 5'
