@@ -1,12 +1,12 @@
 class QuestionPolicy < ApplicationPolicy
   def create?
-    user.present?
+    !user.quest?
   end
   def update?
     user.admin_role? || user.moderator_role? || user.author?(record)
   end
   def destroy?
-
+    
   end
   def index?
     true

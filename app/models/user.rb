@@ -19,6 +19,9 @@ class User < ApplicationRecord
 
   before_save :set_gravatar_hash, if: :email_changed?
 
+  def quest?
+    false
+  end
   def author?(obj)
     obj.user == self
   end
