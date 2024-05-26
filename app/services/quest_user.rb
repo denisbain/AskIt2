@@ -14,6 +14,6 @@ class QuestUser
   def respond_to_missing?(name, include_private)
     return true if name.to_s.end_with?('_role?')
 
-    suoer(name, include_private)
+    super(name, include_private)
   end
 end
