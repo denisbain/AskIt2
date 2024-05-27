@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
   include QuestionsAnswers
+
+  before_action :check_if_banned
   before_action :set_commentable!
   before_action :set_question
   after_action :verify_authorized

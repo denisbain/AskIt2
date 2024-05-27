@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  before_action :check_if_banned
   before_action :require_no_authentication, only: %i[new create]
   before_action :require_authentication, only: %i[edit update]
   before_action :set_user!, only: %i[edit update]
@@ -16,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       sign_in @user
-      flash[:success] = "Weclome to the app, #{current_user.name_or_email}!"
+      flash[:success] = "Welcome to the app, #{current_user.name_or_email}!"
       redirect_to root_path
     else
       render :new

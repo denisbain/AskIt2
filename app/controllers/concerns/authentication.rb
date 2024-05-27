@@ -63,6 +63,12 @@ module Authentication
       cookies.delete :user_id
       cookies.delete :remember_token
     end
+    def check_if_banned
+      if current_user&.banned?
+        flash[:danger] = "Your account is banned."
+        redirect_back(fallback_location: root_path)
+      end
+    end
 
     helper_method :current_user, :user_signed_in?
   end

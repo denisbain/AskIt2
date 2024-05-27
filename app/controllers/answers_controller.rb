@@ -4,6 +4,7 @@ class AnswersController < ApplicationController
   include QuestionsAnswers
   include ActionView::RecordIdentifier
 
+  before_action :check_if_banned
   before_action :set_question!
   before_action :set_answer!, except: :create
   before_action :authorize_answer!
