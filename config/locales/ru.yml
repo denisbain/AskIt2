@@ -43,6 +43,7 @@ ru:
     sign_up: "Регистрация"
     sign_in: "Войти"
     sign_out: "Выйти"
+    log_in: 'Войти'
     edit: "Редактировать профиль"
   questions:
       destroy:
@@ -66,6 +67,23 @@ ru:
         success: 'Комментарий создан!'
       destroy:
         success: 'Комментарий удален!'
+  password_resets:
+    new:
+      title: 'Сбросить пароль'
+      form:
+        email: 'Email'
+        submit: 'Отправить инструкции для сброса пароля'
+        back: 'Назад ко входу в систему'
+  sessions:
+    new:
+      form:
+        email: 'Email'
+        password: 'Пароль'
+        remember_me: 'Запомнить меня'
+        submit: 'Войти'
+        forgot_password: 'Я забыл пароль'
+      title: 'Восстановить пароль'
+
 
   helpers:
     submit:

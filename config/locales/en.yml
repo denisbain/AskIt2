@@ -44,6 +44,7 @@ en:
     sign_up: "Sign Up"
     sign_in: "Log In"
     sign_out: "Log Out"
+    log_in: 'Log in'
     edit: "Edit profile"
   questions:
     destroy:
@@ -67,7 +68,23 @@ en:
       success: 'Comment created!'
     destroy:
       success: 'Comment deleted!'
+  password_resets:
 
+    new:
+      title: 'Reset password'
+      form:
+        email: 'Email'
+        submit: 'Send reset instructions'
+        back: 'Back to sign in'
+  sessions:
+    new:
+      form:
+        email: 'Email'
+        password: 'Password'
+        remember_me: 'Remember me'
+        submit: 'Sign in'
+        forgot_password: 'I forgot my password'
+      title: 'Reset password'
 
 
   helpers:
@@ -89,6 +106,6 @@ en:
     users:
       forms:
         save: 'Save'
-        register: 'Register'
+        register: 'Registration'
     flash:
       not_authorized: 'You are not authorized to perform this action!'
