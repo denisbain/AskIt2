@@ -64,6 +64,7 @@ group :development do
   gem 'rubocop-rails', '~> 2.24', require: false
   gem 'spring'
   gem "foreman"
+  gem 'letter_opener'
 end
 
 group :test do

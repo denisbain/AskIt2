@@ -69,7 +69,6 @@ en:
     destroy:
       success: 'Comment deleted!'
   password_resets:
-
     new:
       title: 'Reset password'
       form:
@@ -85,7 +84,9 @@ en:
         submit: 'Sign in'
         forgot_password: 'I forgot my password'
       title: 'Reset password'
-
+  mailer:
+    password_reset:
+      subject: 'Password reset | AskIt'
 
   helpers:
     submit:

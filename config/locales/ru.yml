@@ -83,6 +83,9 @@ ru:
         submit: 'Войти'
         forgot_password: 'Я забыл пароль'
       title: 'Восстановить пароль'
+  mailer:
+    password_reset:
+      subject: 'Сброс пароля | AskIt'
 
 
   helpers:
