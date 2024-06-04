@@ -11,4 +11,5 @@ class PasswordResetsController < ApplicationController
     flash[:success] = t ".success"
     redirect_to new_session_path
   end
+  
 end
