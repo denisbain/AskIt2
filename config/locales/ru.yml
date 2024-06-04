@@ -68,6 +68,8 @@ ru:
       destroy:
         success: 'Комментарий удален!'
   password_resets:
+    create:
+      success: 'Инструкции по сбросу пароля были отправлены на ваш адрес'
     new:
       title: 'Сбросить пароль'
       form:
