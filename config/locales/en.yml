@@ -69,6 +69,7 @@ en:
     destroy:
       success: 'Comment deleted!'
   password_resets:
+    fail: 'Could not reset your password...'
     create:
       success: 'Password reset instructions were sent to your email address'
     new:
