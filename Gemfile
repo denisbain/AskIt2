@@ -34,6 +34,7 @@ gem 'rubyXL'
 gem 'rubyzip', '~> 2'
 gem 'valid_email2'
 gem 'pundit', '~> 2.3'
+gem 'sidekiq', '~> 6'
 
 
 gem 'pagy', '~> 5'
