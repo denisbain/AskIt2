@@ -18,9 +18,10 @@ class PasswordResetsController < ApplicationController
 
   private
   def set_user
+    redirect_to(new_session_path, flash: {warning: t('password_resets.fail')}) and return unless params[:user].present?
     @user = User.find_by email: params[:user][:email],
                          password_reset_token: params[:user][:password_reset_token]
-    
+
     redirect_to(new_session_path, flash: {warning: t('password_resets.fail')}) unless @user&.password_reset_period_valid?
 
   end

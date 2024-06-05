@@ -1,0 +1,36 @@
+<% provide :page_title, t('.title') %>
+<% currently_at t('menu.log_in') %>
+
+<h1 class="mb-4"><%= t('.title') %></h1>
+
+<%= render 'shared/errors', object: @user %>
+<%# Если мы укажем только модель то при отправке этой формы он отправит в юзер контроллер,
+необходимо отправить в password_reset контроллер. Метод patch указывает что необходимо вызвать метод update %>
+<%= form_with model: @user, url: password_reset_path, method: :patch do |f| %>
+  <%# Необходимо указывать токен и имейл для которого выполняется сброс пароля,
+  в противном случае кто-то может подделать запрос update и сбросить пароль для любой учетной записи %>
+  <%= f.hidden_field :password_reset_token, value: @user.password_reset_token %>
+  <%= f.hidden_field :email, value: @user.email %>
+
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :password %>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.password_field :password, class: 'form-control form-control-lg' %>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :password_confirmation, for: 'user[password_confirmation]' %>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.password_field :password_confirmation, class: 'form-control form-control-lg' %>
+    </div>
+  </div>
+
+  <%= f.submit t('.form.submit'), class: 'btn btn-primary btn-lg' %>
+<% end %>
