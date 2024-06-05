@@ -1,6 +1,21 @@
 # frozen_string_literal: true
 
+require 'sidekiq/web'
+
+class AdminConstraint
+  # На /sidekiq приходит запрос и перенаправляется сюда для проверки.
+  def matches?(request)
+    # Второе условие выполняется, если пользлватель поставил галочку запомнить меня.
+    user_id = request.session[:user_id] || request.cookie_jar.encrypted[:user_id]
+    # Допуск на страницу sidekiq только для администратора.
+    User.find_by(id: user_id)&.admin_role?
+  end
+end
+
 Rails.application.routes.draw do
+  #Интерфейс sidekiq подключается по этому адресу.
+
+  mount Sidekiq::Web => '/sidekiq', :constraints => AdminConstraint.new
   concern :commentable do
     resources :comments, only: %i[create destroy]
   end
