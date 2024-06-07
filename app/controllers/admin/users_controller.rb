@@ -17,7 +17,9 @@ module Admin
 
     def create
       if params[:archive].present?
-        UserBulkImportJob.perform_later params[:archive]
+        # ActiveStorage предоставляет интерфейс,
+        # через который можно сохранить файл в разные хранилища.
+        UserBulkImportJob.perform_later create_blob, current_user
         flash[:success] = 'User imported!'
       end
 
@@ -43,6 +45,15 @@ module Admin
       redirect_to admin_users_path
     end
     private
+
+    # Создание нового объекта в ActiveStorage.
+    def create_blob
+      file = File.open params[:archive]
+      # io - input, output.
+      result = ActiveStorage::Blob.create_and_upload! io: file, filename: params[:archive].original_filename
+      file.close
+      result.key
+    end
 
     def respond_with_zipped_users
       compressed_filestream = Zip::OutputStream.write_buffer do |zos|
