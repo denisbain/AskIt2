@@ -6,9 +6,9 @@ class AdminConstraint
   # На /sidekiq приходит запрос и перенаправляется сюда для проверки.
   def matches?(request)
     # Второе условие выполняется, если пользлватель поставил галочку запомнить меня.
-    user_id = request.session[:user_id] || request.cookie_jar.encrypted[:user_id]
+     user_id = request.session[:user_id] || request.cookie_jar.encrypted[:user_id]
     # Допуск на страницу sidekiq только для администратора.
-    User.find_by(id: user_id)&.admin_role?
+     User.find_by(id: user_id)&.admin_role?
   end
 end
 
@@ -39,7 +39,7 @@ Rails.application.routes.draw do
       resources :comments, only: %i[create destroy]
     end
 
-    namespace :admin do
+    namespace :admin, constraints: AdminConstraint.new do
       resources :users, only: %i[index create edit update destroy]
     end
 
