@@ -22,6 +22,10 @@ en:
     index:
       title: "Welcome to AskIt!"
   admin:
+    user_mailer:
+      bulk_export_done:
+        subject: "Your User Export is Ready"
+        message: "User export has been completed. The file is attached."
     users:
       edit:
         title: 'Edit user'

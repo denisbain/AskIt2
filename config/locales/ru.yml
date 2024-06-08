@@ -22,6 +22,10 @@ ru:
     index:
       title: "Добро пожаловать в AskIt!"
   admin:
+    user_mailer:
+      bulk_export_done:
+        subject: "Экпорт пользоваелей выполнен!"
+        message: "Экспорт пользователей был выполнен. Файл прикреплен."
     users:
       edit:
         title: 'Редактирование пользователя'
