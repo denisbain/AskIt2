@@ -8,6 +8,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.0",
     "bootstrap": "5.2.3",
+    "node": "16.20.2",
     "tom-select": "2.1",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
