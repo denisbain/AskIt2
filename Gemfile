@@ -3,18 +3,21 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+ruby '3.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '7.1.3.4'
+gem 'rails', '7.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '1.4.2'
 # Use Puma as the app server
 gem 'puma', '5.3.2'
+# При переходе на Esbuild sprockets нужен, чтобы отдавать assets
+gem 'sprockets-rails', '~> 3.4'
+gem 'jsbundling-rails', '~> 1.0'
+gem 'cssbundling-rails', '~> 1.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '6'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '5.4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '5.2.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -42,7 +45,7 @@ gem 'pagy', '~> 5'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '1.7.5', require: false
+gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

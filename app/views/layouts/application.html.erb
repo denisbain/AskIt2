@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<%=I18n.locale %>>
+<html lang="<%=I18n.locale %>">
   <head>
     <meta charset="utf-8">
     <title><%= full_title(yield(:page_title)) %></title>
@@ -7,8 +7,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", media: 'all' %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
   <body data-lang="<%=I18n.locale %>">
